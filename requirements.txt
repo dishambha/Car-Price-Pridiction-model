@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 31 01:15:59 2025
-
-@author: Dishambha Awasthi
-"""
-
+streamlit==1.35.0
+pandas==2.2.1
+numpy==1.26.4
+scikit-learn==1.4.2
