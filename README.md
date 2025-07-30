@@ -1,6 +1,6 @@
 # 🚗 Car Price Prediction Model
 
-This project aims to predict the price of used cars based on various attributes such as brand, fuel type, transmission, engine size, and more. It applies supervised machine learning techniques to train a regression model and evaluate its performance.
+This project predicts the **selling price** of used cars based on user-provided attributes such as fuel type, transmission, kilometers driven, and more. It uses supervised machine learning techniques and provides an easy-to-use web interface.
 
 ---
 
@@ -11,6 +11,7 @@ This project aims to predict the price of used cars based on various attributes 
 - [Working](#working)
 - [Methodology](#methodology)
 - [Technologies Used](#technologies-used)
+- [Web App Interface](#web-app-interface)
 - [Results](#results)
 - [How to Run](#how-to-run)
 - [Future Scope](#future-scope)
@@ -21,17 +22,17 @@ This project aims to predict the price of used cars based on various attributes 
 
 ## 🎯 Project Objective
 
-To build a regression model that accurately predicts the selling price of a used car based on its features. The goal is to provide a reference for buyers and sellers in the used car market.
+To develop a regression-based machine learning model that predicts the resale price of used cars. The model helps buyers and sellers estimate the market value of a car based on specific input features.
 
 ---
 
 ## 📂 Dataset Description
 
-The dataset contains the following key features:
+The dataset contains the following features:
 
 | Feature           | Description                              |
 |------------------|------------------------------------------|
-| Name             | Car name or brand                        |
+| Name             | Car brand/model                          |
 | Year             | Year of manufacture                      |
 | Selling_Price    | Price at which the car is sold (Target) |
 | Present_Price    | Price of the car when new               |
@@ -41,58 +42,58 @@ The dataset contains the following key features:
 | Transmission     | Manual or Automatic                      |
 | Owner            | Number of previous owners                |
 
-> 📌 **Source**: [Mention source like Kaggle or UCI]
+> 📌 **Source**: *[Mention your dataset source, e.g., Kaggle or UCI]*
 
 ---
 
 ## ⚙️ Working
 
-1. **Data Cleaning**: Checked for null values and cleaned outliers.
-2. **Feature Engineering**:
-   - Converted categorical columns using OneHotEncoding/LabelEncoding.
-   - Derived new columns if necessary (e.g., car age = current year - manufacturing year).
-3. **Model Training**:
-   - Trained a Linear Regression model on the cleaned dataset.
-   - Used 80/20 train-test split.
-4. **Evaluation**:
-   - Evaluated using R² Score, MAE, and MSE.
-5. **Prediction**:
-   - Used the trained model to predict prices for unseen data.
+1. Clean and preprocess the dataset.
+2. Convert categorical variables into numerical format.
+3. Train a regression model (Linear Regression).
+4. Evaluate the model using R² Score, MAE, and MSE.
+5. Predict selling price based on user inputs in the deployed web interface.
 
 ---
 
 ## 🧠 Methodology
 
-### 🔸 1. Data Preprocessing
-- Removed unnecessary columns
-- Converted string categories to numerical (Label/OneHot Encoding)
-- Removed extreme outliers using IQR or domain knowledge
-- Normalized/standardized data if needed
+### 🔹 1. Data Preprocessing
+- Removed null values and irrelevant columns.
+- Encoded categorical features.
+- Created new features like car age.
+- Handled outliers where necessary.
 
-### 🔸 2. Exploratory Data Analysis (EDA)
-- Visualized feature correlations using heatmaps
-- Analyzed distributions of selling price, fuel type, and transmission
+### 🔹 2. EDA (Exploratory Data Analysis)
+- Analyzed price trends by fuel type, seller type, etc.
+- Used correlation heatmaps and distribution plots.
 
-### 🔸 3. Model Selection & Training
-- **Model Used**: `Linear Regression`
-- Compared with models like Random Forest and Decision Tree (optional)
-- Split the dataset into train and test
+### 🔹 3. Model Training
+- Used **Linear Regression** as the base model.
+- Train-test split: 80/20
+- Optionally compared with Random Forest and Decision Tree.
 
-### 🔸 4. Model Evaluation
-- Metrics:
-  - **R² Score**: Measures goodness of fit
-  - **Mean Absolute Error (MAE)**
-  - **Mean Squared Error (MSE)**
+### 🔹 4. Evaluation Metrics
+- **R² Score**
+- **Mean Absolute Error (MAE)**
+- **Mean Squared Error (MSE)**
 
 ---
 
 ## 🛠️ Technologies Used
 
 - Python 3.x
-- Jupyter Notebook / Colab
-- NumPy, Pandas – Data handling
-- Matplotlib, Seaborn – Visualization
-- Scikit-learn – ML Modeling
+- Jupyter Notebook / Google Colab
+- Libraries: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
+- Web App: Streamlit or Flask
+
+---
+
+## 🖼️ Web App Interface
+
+The user-friendly interface allows users to input car details and instantly view predicted selling prices.
+
+![Car Price Prediction UI](images/Screenshot-UI.png)
 
 ---
 
@@ -104,13 +105,15 @@ The dataset contains the following key features:
 | MAE           | 1.2 Lakhs       |
 | MSE           | 3.6 Lakhs²      |
 
-> The model gives accurate price predictions within a reasonable error margin.
+> ✅ The model performs well and gives a realistic estimate of the resale value.
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone this repository:
+### 🧪 For Notebook:
+
+1. Clone the repo:
    ```bash
    git clone https://github.com/dishambha/Car-Price-Pridiction-model
    cd Car-Price-Pridiction-model
