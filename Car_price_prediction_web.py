@@ -14,7 +14,7 @@ import streamlit as st
 # Note: Ensure 'trained_model.sav' is in the correct path.
 # Using a relative path is often better for deployment.
 try:
-    loaded_model = pickle.load(open('E:/ml_project/trained_model.sav', 'rb'))
+    loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 except FileNotFoundError:
     st.error("Model file not found. Please make sure 'trained_model.sav' is in the correct directory.")
     st.stop()
